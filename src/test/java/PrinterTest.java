@@ -53,6 +53,12 @@ public class PrinterTest {
         assertEquals(990, myPrinter.getToner());
     }
 
+    @Test
+    public void cannotPrintWithoutEnoughToner(){
+        myPrinter.print(10000, 1);
+        assertEquals(1000, myPrinter.getToner());
+    }
+
 
 
 

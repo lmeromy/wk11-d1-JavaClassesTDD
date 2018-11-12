@@ -21,7 +21,7 @@ public class Printer {
 
     public void print(int pages, int copies){
         int lessPaper = pages * copies;
-        if(lessPaper <= this.sheetsLeft){
+        if(lessPaper <= this.sheetsLeft && lessPaper <= this.tonerLeft){
             this.sheetsLeft = this.sheetsLeft - lessPaper;
             this.tonerLeft = this.tonerLeft - lessPaper;
         } else {
